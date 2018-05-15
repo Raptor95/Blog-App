@@ -5,6 +5,8 @@ var express          = require('express'),
     mongoose         = require('mongoose'),
     bodyParser       = require('body-parser');
 
+var port = process.env.PORT || 3000;
+
 //APP Config
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(expressSanitizer());
@@ -101,6 +103,6 @@ app.delete("/blogs/:id",function(req,res)
     });
 });
 
-app.listen(3000, function(){
-    console.log("Listening on port 3000");
+app.listen(port, function(){
+    console.log(`Listening on port ${port}`);
 })
