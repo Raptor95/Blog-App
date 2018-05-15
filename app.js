@@ -6,6 +6,7 @@ var express          = require('express'),
     bodyParser       = require('body-parser');
 
 var port = process.env.PORT || 3000;
+var url = process.env.MONGOLAB_URI;
 
 //APP Config
 app.use(bodyParser.urlencoded({extended:true}));
@@ -15,7 +16,8 @@ app.set("view engine","ejs");
 app.use(express.static("public"));
 
 //Mongoose/Model Config
-mongoose.connect("mongodb://localhost/blog_app");
+//mongoose.connect("mongodb://localhost/blog_app");
+mongoose.connect(url);
 var blogSchema = new mongoose.Schema({
     title: String,
     image: String,
