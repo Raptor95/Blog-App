@@ -5,4 +5,4 @@ Technologies Used: <br />
 Front-End : Semantic UI <br />
 Back-End  : Node.js, Express.js , MongoDB and Mongoose
 <br />
-Link: https://immense-earth-83250.herokuapp.com/
+Link: https://kashif-blog.herokuapp.com/
